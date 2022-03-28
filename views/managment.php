@@ -60,8 +60,8 @@
                 <?php endforeach; ?>
             </table>
     </div>
-        <div class="w-100 mt-5 d-flex justify-content-center align-items-center">
-            <div class="mt-5 position-absolute popup-container" id="popup-wrapper" >
+        <div class="w-100 mt-5 d-flex justify-content-center align-items-center" >
+            <div class="mt-5 position-absolute popup-container shadow" id="popup-wrapper" style="background-color: #ff5f00;" >
                 <Form action = "http://localhost/booking_train/managment/addTrip" method = "POST">
                         <h2 class = "title fw-bold">ADD TRIP</h2>
                         <div class="input-group mt-4 ps-2 pe-2">
@@ -105,8 +105,8 @@
                                 <input type="number" min="1" class="form-control" id="priceid" name="price" required>
                             </div>
                         <div>
-                        <button class= "btn btn-primary mt-4 d-grid col-5 mx-auto pt-2 pb-2" type="submit">ADD</button>
-                        <a class= "btn btn-danger mt-4 d-grid col-5 mx-auto pt-2 pb-2" id="btn-cancel" >Cancel</a>
+                        <button class= "btn btn-primary text-white fw-bold shadow mt-4 d-grid col-5 mx-auto pt-2 pb-2" type="submit">ADD</button>
+                        <a class= "btn btn-warning text-white fw-bold shadow mt-4 d-grid col-5 mx-auto pt-2 pb-2" id="btn-cancel" >Cancel</a>
                         </div>
                 </Form>
             </div>

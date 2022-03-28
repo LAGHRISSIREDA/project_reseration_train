@@ -13,7 +13,12 @@ class SignupController
 
 	public function index()
 	{
+		session_start();
+		if(!empty($_SESSION['i']) && isset($_SESSION['is'])){
+			header('location:http://localhost/booking_train/home');
+		}else{
 		require_once __DIR__."/../views/signup.php";
+		}
 	}
 	public function signup_function() {
 		$email = $_POST['email'];

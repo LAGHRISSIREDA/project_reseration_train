@@ -22,19 +22,19 @@
               data-bs-target="#navmenu">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navmenu">
+            <div class="collapse navbar-collapse text-center" id="navmenu">
               <ul class="navbar-nav ms-auto">
-                <li class="nav-item me-4">
-                  <a href="home" class="nav-link fw-bold" style = "color: white">Home</a>
+                <li class="nav-item me-4 ">
+                  <a href="home" class="nav-link fw-bold text-white" >Home</a>
+                </li>
+                <li class="nav-item  me-4">
+                <a href="<?php if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {echo 'managment';} else {echo 'booking';} ?>" class="nav-link fw-bold text-white" ><?php if ( isset($_SESSION['role']) && $_SESSION['role'] == 1) {echo 'Managment';} else {echo 'Booking';} ?></a>
                 </li>
                 <li class="nav-item me-4">
-                <a href="<?php if (isset($_SESSION['role']) && $_SESSION['role'] == 1) {echo 'managment';} else {echo 'booking';} ?>" class="nav-link fw-bold" style = "color: white"><?php if ( isset($_SESSION['role']) && $_SESSION['role'] == 1) {echo 'Managment';} else {echo 'Booking';} ?></a>
+                  <a href="<?php if (isset($_SESSION['id'])) {echo 'profile';} else {echo 'signin';} ?>" class="nav-link fw-bold text-white" <?php if (isset($_SESSION['id'])) {echo 'display:none';} else {echo 'display:flex';} ?>"><?php if (isset($_SESSION['id'])) {echo 'Profile';} else {echo 'Sign in';} ?></a>
                 </li>
                 <li class="nav-item me-4">
-                  <a href="<?php if (isset($_SESSION['id'])) {echo 'profile';} else {echo 'signin';} ?>" class="nav-link fw-bold" style = "color: white; <?php if (isset($_SESSION['id'])) {echo 'display:none';} else {echo 'display:flex';} ?>"><?php if (isset($_SESSION['id'])) {echo 'Profile';} else {echo 'Sign in';} ?></a>
-                </li>
-                <li class="nav-item me-4">
-                <a href="<?php if (isset($_SESSION['id'])) {echo 'signout';} else {echo 'signup';} ?>" class="nav-link fw-bold" style = "color: white"><?php if (isset($_SESSION['id'])) {echo 'Sign out';} else {echo 'Sign up';} ?></a>
+                <a href="<?php if (isset($_SESSION['id'])) {echo 'signout';} else {echo 'signup';} ?>" class="nav-link fw-bold text-white" ><?php if (isset($_SESSION['id'])) {echo 'Sign out';} else {echo 'Sign up';} ?></a>
                 </li>
               </ul>
             </div>

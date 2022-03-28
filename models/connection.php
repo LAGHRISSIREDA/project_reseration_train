@@ -91,9 +91,9 @@ class Connection
 	}
 
 	public function cancelTrip($table, $id){
-		$query = $this->conn->prepare("UPDATE table_name
+		$query = $this->conn->prepare("UPDATE $table
 		SET available = 'false'
-		WHERE condition;");
+		WHERE id=$id;");
 		$query->execute();
 	}
 }

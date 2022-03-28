@@ -14,11 +14,12 @@ class ManagmentController
 		$managment = new Managment();
 		$booking_result = $managment->fetchAllTrip();
 		require_once __DIR__."/../views/managment.php";
+		
 	}
 
 	public function addTrip() {
 		$managment = new Managment();
-		$managment->addtrip($_POST['date'],$_POST['depart_time'], $_POST['arrive_date'], '00:00', $_POST['depart_city'], $_POST['arrive_city'], $_POST['price'], $_POST['place_number']);
+		$managment->addtrip($_POST['date'],$_POST['depart_time'], $_POST['arrive_time'], '00:00', $_POST['depart_city'], $_POST['arrive_city'], $_POST['price'], $_POST['place_number']);
 		header("Location: http://localhost/booking_train/managment");
 	}
 

@@ -33,7 +33,7 @@
                     </select>
                 </div>
                 </div>
-                <button type ="submit" class="btn mx-auto btn-primary w-25 mt-4 mb-4 fw-bold" style="background-color:#4A1FA9" id="btn-search">Search</button>
+                <button type ="submit" class="btn mx-auto shadow text-white fw-bold w-25 mt-4 mb-4 fw-bold" style="background-color:#ff5f00" id="btn-search">Search</button>
         </form>
         </div>
         <?php if(isset($_SESSION['id'])) :?>

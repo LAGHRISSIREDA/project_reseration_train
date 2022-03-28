@@ -14,13 +14,13 @@ class Authentication {
     }
     public function signin($email, $password) {
         $ctn = new Connection();
-        $maska =$ctn->selectOne($this->table, $email, $password);
-        if(!empty($maska)){
+        $datta =$ctn->selectOne($this->table, $email, $password);
+        if(!empty($datta)){
             session_start();
-            $_SESSION["id"] = $maska['id'];
-            $_SESSION["email"] = $maska['email'];
-            $_SESSION["full_name"] = $maska['full_name'];
-            $_SESSION["role"] = $maska['role'];
+            $_SESSION["id"] = $datta['id'];
+            $_SESSION["email"] = $datta['email'];
+            $_SESSION["full_name"] = $datta['full_name'];
+            $_SESSION["role"] = $datta['role'];
             header('location: http://localhost/booking_train/home');
             exit();
         }
